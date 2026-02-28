@@ -101,7 +101,7 @@ export default function App() {
         </nav>
       </header>
 
-      {/* Hero Section */}
+      {/* Hero Section 
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
@@ -141,7 +141,7 @@ export default function App() {
           </motion.div>
         </div>
       </section>
-
+*/}
       {/* Introduction Section */}
       <Section id="sobre">
         <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-center">
