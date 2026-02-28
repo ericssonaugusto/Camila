@@ -141,9 +141,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* Pain Points Section */}
-
-
       {/* Introduction Section */}
       <Section id="sobre">
         <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-center">
@@ -229,30 +226,6 @@ export default function App() {
               <h3 className="text-2xl font-serif font-bold mb-4">{card.title}</h3>
               <p className="text-zinc-400 leading-relaxed">{card.desc}</p>
             </motion.div>
-          ))}
-        </div>
-      </Section>
-
-      {/* Testimonials */}
-      <Section id="depoimentos" className="bg-pattern">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">O que alguns clientes dizem</h2>
-          <div className="w-20 h-1 bg-burgundy mx-auto"></div>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            "“Eu achava que não tinha mais jeito, mas descobri que tinha direito sim.”",
-            "“Ela me explicou tudo de um jeito que finalmente entendi.”",
-            "“Me senti seguro do começo ao fim do processo.”",
-            "“Eu tinha medo de entrar com ação e perder. Hoje vejo que foi a melhor decisão.”"
-          ].map((quote, i) => (
-            <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-zinc-100 flex flex-col justify-between">
-              <p className="text-zinc-700 italic mb-6 leading-relaxed">{quote}</p>
-              <div className="flex gap-1 text-burgundy">
-                {[...Array(5)].map((_, i) => <span key={i}>★</span>)}
-              </div>
-            </div>
           ))}
         </div>
       </Section>
