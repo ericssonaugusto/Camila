@@ -142,55 +142,7 @@ export default function App() {
       </section>
 
       {/* Pain Points Section */}
-      <Section className="bg-zinc-50">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">Você está passando por isso?</h2>
-          <div className="w-20 h-1 bg-burgundy mx-auto"></div>
-        </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <p className="text-xl text-zinc-600 italic mb-8">Talvez você esteja pensando:</p>
-            {[
-              "“Será que eu tenho direito e não estou sabendo?”",
-              "“Acho que a empresa me passou pra trás.”",
-              "“Meu acerto veio muito baixo.”",
-              "“Estou com medo de não conseguir me aposentar.”",
-              "“O INSS negou meu pedido.”"
-            ].map((text, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm border border-zinc-100"
-              >
-                <div className="mt-1 text-burgundy">
-                  <ShieldCheck className="w-6 h-6" />
-                </div>
-                <p className="text-lg font-medium text-zinc-800">{text}</p>
-              </motion.div>
-            ))}
-            <p className="text-zinc-600 mt-8 leading-relaxed">
-              Você tentou resolver sozinho. Tentou entender pela internet. Talvez buscou medidas administrativas.
-              E mesmo assim… continua se sentindo injustiçado e inseguro.
-              <br /><br />
-              <strong className="text-zinc-900">Isso não é exagero. É preocupação com o seu futuro.</strong>
-            </p>
-          </div>
-          <div className="relative">
-            <img
-              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800"
-              alt="Trabalhador preocupado"
-              className="rounded-2xl shadow-2xl object-cover aspect-video"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute -bottom-6 -right-6 bg-burgundy text-white p-8 rounded-2xl hidden lg:block max-w-xs shadow-xl">
-              <p className="text-lg font-medium">Não deixe o tempo passar. O seu direito tem prazo.</p>
-            </div>
-          </div>
-        </div>
-      </Section>
 
       {/* Introduction Section */}
       <Section id="sobre">
