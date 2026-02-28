@@ -10,7 +10,9 @@ import {
   Clock,
   ShieldCheck,
   Scale,
-  Users
+  Users,
+  Briefcase,
+  Landmark
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -194,36 +196,73 @@ export default function App() {
       {/* Methodology Section */}
       <Section id="atuacao" className="bg-zinc-900 text-white">
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">Como trabalhamos por você</h2>
-          <p className="text-zinc-400 max-w-2xl mx-auto text-lg">Transparência e firmeza em cada etapa do seu processo.</p>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">Áreas de Atuação</h2>
+          <p className="text-zinc-400 max-w-2xl mx-auto text-lg">Especialistas na defesa dos seus direitos com foco e estratégia.</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-12">
           {[
             {
+              icon: <Briefcase className="w-10 h-10" />,
+              title: "Direito do Trabalho",
+              foco: "Defesa de direitos e relações de emprego.",
+              resumo: "Assessoria completa para empregados e empresas, atuando com ética e técnica na garantia dos direitos trabalhistas e na prevenção de riscos jurídicos.",
+              destaques: [
+                "Reclamações Trabalhistas e Vínculo",
+                "Verbas Rescisórias e Horas Extras",
+                "Indenizações por Acidentes",
+                "Combate ao Assédio no Trabalho",
+                "Consultoria preventiva e acordos"
+              ]
+            },
+            {
               icon: <Scale className="w-10 h-10" />,
-              title: "Explicação Clara",
-              desc: "Você não sai da consulta com mais dúvidas. Eu analiso seus documentos, explico o que realmente está acontecendo e mostro quais são suas chances. Sem promessas irreais. Sem enrolação."
+              title: "Direito Civil e Consumidor",
+              foco: "Soluções para conflitos do cotidiano.",
+              resumo: "Representação jurídica estratégica em relações civis e contratuais, buscando soluções rápidas e eficazes para proteger seu patrimônio e interesses.",
+              destaques: [
+                "Indenizações por Danos",
+                "Cobranças e Execuções de Dívidas",
+                "Ações de Despejo e Locação",
+                "Defesa do Consumidor",
+                "Conflitos entre Particulares"
+              ]
             },
             {
-              icon: <Clock className="w-10 h-10" />,
-              title: "Acompanhamento Próximo",
-              desc: "Processos geram ansiedade. Por isso, você tem acompanhamento próximo e atualização clara do que está acontecendo. Você nunca fica no escuro."
-            },
-            {
-              icon: <ShieldCheck className="w-10 h-10" />,
-              title: "Firmeza na Defesa",
-              desc: "Buscar seus direitos não é “arrumar briga”. É proteger sua dignidade e sua segurança financeira. Se houve erro ou injustiça, existe caminho legal para resolver."
+              icon: <Landmark className="w-10 h-10" />,
+              title: "Direito Previdenciário",
+              foco: "Planejamento e obtenção de benefícios.",
+              resumo: "Defesa de trabalhadores rurais e urbanos. Atuamos desde o planejamento da aposentadoria até a reversão de benefícios negados pelo INSS.",
+              destaques: [
+                "Aposentadoria Híbrida e Especial",
+                "Planejamento Previdenciário",
+                "Auxílio-Doença, Invalidez e BPC",
+                "Pensão por Morte e Salário-Maternidade",
+                "Revisão e Correção de Valores"
+              ]
             }
           ].map((card, i) => (
             <motion.div
               key={i}
               whileHover={{ y: -10 }}
-              className="bg-zinc-800/50 p-10 rounded-2xl border border-zinc-700 hover:border-burgundy transition-all"
+              className="bg-zinc-800/50 p-8 rounded-2xl border border-zinc-700 hover:border-burgundy transition-all flex flex-col h-full"
             >
               <div className="text-burgundy mb-6">{card.icon}</div>
-              <h3 className="text-2xl font-serif font-bold mb-4">{card.title}</h3>
-              <p className="text-zinc-400 leading-relaxed">{card.desc}</p>
+              <h3 className="text-2xl font-serif font-bold mb-2">{card.title}</h3>
+              <p className="text-burgundy font-medium text-sm mb-4">{card.foco}</p>
+              <p className="text-zinc-400 leading-relaxed mb-6">{card.resumo}</p>
+
+              <div className="mt-auto">
+                <hr className="border-zinc-700 mb-6" />
+                <ul className="space-y-3">
+                  {card.destaques.map((item, j) => (
+                    <li key={j} className="flex items-start gap-3 text-zinc-300 text-sm">
+                      <CheckCircle2 className="w-4 h-4 text-burgundy flex-shrink-0 mt-0.5" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -271,21 +310,18 @@ export default function App() {
             </div>
           </div>
 
-          <div className="bg-white p-10 rounded-3xl shadow-xl border border-zinc-100 text-center flex flex-col justify-center">
-            <h3 className="text-2xl font-serif font-bold mb-6">Não espere o problema aumentar</h3>
-            <p className="text-zinc-600 mb-10 leading-relaxed">
-              Quanto antes você entende sua situação, mais segurança você tem para decidir.
-              Clique abaixo e descubra se você tem valores a receber ou direito a revisar seu benefício.
-            </p>
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-burgundy hover:bg-burgundy-dark text-white px-8 py-5 rounded-xl text-xl font-bold transition-all flex items-center justify-center gap-3 shadow-xl shadow-burgundy/30"
-            >
-              QUERO ANALISAR MEU CASO PELO WHATSAPP
-              <MessageCircle className="w-6 h-6" />
-            </a>
+          <div className="bg-white p-2 rounded-3xl shadow-xl border border-zinc-100 min-h-[400px]">
+            <iframe
+              src="https://maps.google.com/maps?q=Rua%20Belarmino%20de%20Mendon%C3%A7a%20107%2C%20Foz%20do%20Igua%C3%A7u%20-%20PR&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="w-full h-full rounded-2xl"
+              title="Localização do Escritório"
+            ></iframe>
           </div>
         </div>
       </Section>
