@@ -83,9 +83,8 @@ export default function App() {
             Camila Schuller <span className="text-burgundy">Lopes</span>
           </div>
           <div className="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest text-zinc-600">
-            <a href="#sobre" className="hover:text-burgundy transition-colors">Sobre</a>
-            <a href="#atuacao" className="hover:text-burgundy transition-colors">Atuação</a>
-            <a href="#depoimentos" className="hover:text-burgundy transition-colors">Depoimentos</a>
+            <a href="#sobre" className="hover:text-burgundy transition-colors">Sobre mim</a>
+            <a href="#atuacao" className="hover:text-burgundy transition-colors">Áreas de Atuação</a>
             <a href="#contato" className="hover:text-burgundy transition-colors">Contato</a>
           </div>
           <a
