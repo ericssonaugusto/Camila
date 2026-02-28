@@ -415,7 +415,7 @@ export default function App() {
                 <Phone className="w-4 h-4 text-burgundy" /> (45) 99968-9178
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-burgundy" /> contato@camilaschuller.adv.br
+                <Mail className="w-4 h-4 text-burgundy" /> camilaschullerl@gmail.com
               </li>
               <li className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-burgundy" /> Foz do Iguaçu - PR
