@@ -145,49 +145,63 @@ export default function App() {
       {/* Introduction Section */}
       <Section id="sobre">
         <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-center">
-          <div className="order-2 md:order-1 md:col-span-4 lg:col-span-5 relative flex justify-center">
+          <div className="md:col-span-4 lg:col-span-5 relative flex justify-center">
             <img
               src="/camila.jpg"
-              alt="Camila Schuller Lopes"
+              alt="Dra. Camila Schuller Lopes"
               className="w-full max-w-sm md:max-w-md lg:max-w-lg object-cover aspect-[5/9] rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 object-top"
               referrerPolicy="no-referrer"
             />
           </div>
-          <div className="order-1 md:order-2 md:col-span-8 lg:col-span-7">
-            <span className="text-burgundy font-bold tracking-widest uppercase text-sm mb-4 block">Solução e Confiança</span>
-            <h2 className="text-4xl font-serif font-bold mb-6">Existe solução — e você pode começar agora</h2>
+          <div className="md:col-span-8 lg:col-span-7">
+            <h2 className="text-4xl font-serif font-bold mb-2">Dra. Camila Schuller Lopes</h2>
+            <p className="text-burgundy font-bold tracking-widest uppercase text-sm mb-8 block">OAB/PR 74.316</p>
+
+            <p className="text-lg text-zinc-600 mb-6 leading-relaxed">
+              Com 11 anos de experiência e atuação em âmbito nacional por meio do atendimento digital, ofereço assessoria jurídica pautada na transparência e no atendimento humanizado.
+            </p>
+
             <p className="text-lg text-zinc-600 mb-8 leading-relaxed">
-              Me chamo <strong className="text-zinc-900">Camila Schuller Lopes</strong>.
-              Atuo há 6 anos em Foz do Iguaçu e também com atendimento online, ajudando pessoas que:
+              Minha atuação é focada em fornecer clareza técnica e segurança jurídica para clientes que buscam:
             </p>
-            <ul className="space-y-4 mb-10">
-              {[
-                "Foram prejudicadas no trabalho",
-                "Têm dificuldades para se aposentar",
-                "Precisam revisar valores de salário, pensão ou benefícios",
-                "Querem entender se vale a pena entrar com ação"
-              ].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-zinc-800 font-medium">
-                  <CheckCircle2 className="w-5 h-5 text-burgundy flex-shrink-0" />
-                  {item}
-                </li>
-              ))}
+
+            <ul className="space-y-6 mb-10">
+              <li className="flex gap-4">
+                <div className="mt-1 bg-burgundy/10 p-3 rounded-xl text-burgundy h-fit">
+                  <Briefcase className="w-5 h-5" />
+                </div>
+                <div>
+                  <strong className="text-zinc-900 block mb-1 text-lg">Direito do Trabalho</strong>
+                  <span className="text-zinc-600 leading-relaxed">Orientação sobre relações de emprego, rescisões e garantias fundamentais do trabalhador.</span>
+                </div>
+              </li>
+              <li className="flex gap-4">
+                <div className="mt-1 bg-burgundy/10 p-3 rounded-xl text-burgundy h-fit">
+                  <Landmark className="w-5 h-5" />
+                </div>
+                <div>
+                  <strong className="text-zinc-900 block mb-1 text-lg">Direito Previdenciário</strong>
+                  <span className="text-zinc-600 leading-relaxed">Consultoria para concessão de benefícios, revisões e planejamento de aposentadoria.</span>
+                </div>
+              </li>
+              <li className="flex gap-4">
+                <div className="mt-1 bg-burgundy/10 p-3 rounded-xl text-burgundy h-fit">
+                  <Scale className="w-5 h-5" />
+                </div>
+                <div>
+                  <strong className="text-zinc-900 block mb-1 text-lg">Análise Consultiva</strong>
+                  <span className="text-zinc-600 leading-relaxed">Estudo detalhado de viabilidade jurídica para embasar decisões seguras.</span>
+                </div>
+              </li>
             </ul>
-            <div className="bg-zinc-50 p-6 rounded-xl border-l-4 border-burgundy mb-8">
-              <p className="text-zinc-700 italic">
-                "Aqui você recebe explicação clara, sem juridiquês. Você entende exatamente sua situação antes de qualquer decisão."
-              </p>
-            </div>
-            <p className="text-zinc-600 mb-8">
-              Em causas trabalhistas e previdenciárias, atuo com honorários de êxito — você paga ao final do processo.
-            </p>
+
             <a
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-burgundy font-bold text-lg hover:underline"
             >
-              Falar com Camila agora <ArrowRight className="w-5 h-5" />
+              Falar com a Dra. Camila agora <ArrowRight className="w-5 h-5" />
             </a>
           </div>
         </div>
@@ -329,19 +343,19 @@ export default function App() {
       {/* FAQ Section */}
       <Section>
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-serif font-bold mb-12 text-center">Perguntas Frequentes</h2>
+          <h2 className="text-3xl font-serif font-bold mb-12 text-center">Principais Dúvidas</h2>
           <div className="space-y-2">
             <FAQItem
-              question="Preciso pagar para entrar com processo trabalhista ou previdenciário?"
-              answer="Em muitas situações, atuo com honorários de êxito, ou seja, você paga ao final do processo, apenas se houver ganho de causa ou recebimento de valores."
+              question="Como funciona a contratação dos serviços jurídicos?"
+              answer="A prestação de serviços advocatícios é formalizada mediante contrato, onde todas as condições, prazos e honorários são detalhados com total transparência, seguindo rigorosamente a Tabela de Honorários da OAB e as normas vigentes."
             />
             <FAQItem
-              question="Atende somente em Foz do Iguaçu?"
-              answer="Não. O atendimento pode ser presencial em nosso escritório em Foz do Iguaçu ou totalmente online, atendendo clientes em qualquer lugar do país com a mesma segurança e proximidade."
+              question="O atendimento é restrito a Foz do Iguaçu?"
+              answer="Não. Além do atendimento presencial em nossa sede em Foz do Iguaçu, dispomos de estrutura para atendimento digital em todo o território nacional. Utilizamos ferramentas seguras que garantem a mesma proximidade, sigilo e eficiência de uma consulta presencial, onde quer que o cliente esteja."
             />
             <FAQItem
-              question="E se eu não souber se realmente tenho direito?"
-              answer="Justamente por isso é importante analisar seu caso. Muitas pessoas descobrem que tinham valores a receber e não sabiam. Nossa análise inicial serve para esclarecer exatamente essa dúvida."
+              question="Como saber se o meu caso possui viabilidade jurídica?"
+              answer="O primeiro passo é a realização de uma análise técnica consultiva. Durante esse atendimento, avaliamos detalhadamente a documentação e os fatos apresentados para oferecer um parecer fundamentado sobre os seus direitos, garantindo que você tome decisões com base em informações jurídicas sólidas."
             />
           </div>
         </div>
